@@ -1,7 +1,12 @@
-const express = require ('express');
+const express = 
+require ('express');
+
+const userRouter = 
+require('./routes/users');
 
 const app = express(); //caling this function ssets up a function
 app.set('view engine', 'ejs');
+app.use('/users', userRouter);
 
 
 app.get('/', (req, res)=>{
@@ -10,15 +15,8 @@ app.get('/', (req, res)=>{
         {user:"Macky!"});
 }); //this function will run when someone goes to the root folder
 
-app.get('/users', (req, res)=>{
-    res.send('User List');
-});
-app.get('/users/new', (req, res)=>{
-    res.send('New User Form');
-});
-
-
 app.listen(3030); //means port 3030
+
 
 
 
