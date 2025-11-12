@@ -5,11 +5,11 @@ require ('express');
 const router = express.router(); 
 
 router.get('/', (req,res) =>{
-    res.send('posts');
+    res.send('posts List');
 });
 
 router.get('/new', (req,res)=>{
-    res.send('New User Post');
+    res.send('Create a nre Post');
 });
 
 module.exports = router;

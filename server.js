@@ -1,11 +1,7 @@
-const express = 
-require ('express');
+const express = require ('express');
 
-const userRouter = 
-require('./routes/users');
-
-const postsRouter = 
-require ('./routes/posts');
+const userRouter = require('./routes/users');
+const postsRouter = require ('./routes/posts');
 
 const app = express(); //caling this function ssets up a function
 app.set('view engine', 'ejs');
@@ -17,6 +13,7 @@ app.get('/', (req, res)=>{
     res.render("index", 
         {user:"Macky!"});
 }); //this function will run when someone goes to the root folder
+
 
 app.listen(3030); //means port 3030
 
