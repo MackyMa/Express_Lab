@@ -1,6 +1,5 @@
 //Quest 3 sub page
-const express = 
-require ('express');
+const express = require ('express');
 
 const router = express.router(); 
 
@@ -9,7 +8,7 @@ router.get('/', (req,res) =>{
 });
 
 router.get('/new', (req,res)=>{
-    res.send('Create a nre Post');
+    res.send('Create a new Post');
 });
 
 module.exports = router;
