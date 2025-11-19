@@ -20,11 +20,6 @@ app.get('/', (req, res)=>{
         {user:"Macky!"});
 }); //this function will run when someone goes to the root folder
 
-app.get('/new',(req,res)=>{
-    res.render('users/new', {firstName: "Please enter yout name"});
-});
-
-
 app.listen(3030); //means port 3030
 
 function logger (req,res, next){

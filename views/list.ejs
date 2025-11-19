@@ -2,18 +2,38 @@
 <html lang="en">
 <head>
     <title>Document</title>
-<style>
-    .user {
-        border-bottom: 2px solid black;
-    }
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>Current Users</h1>
-    <% users.forEach(user=>{ %>
-        <div class = "user">
-            <h3> <%= user.name%> </h3>
-        </div>
-    <% }); >%
+    <h1>Current users</h1>
+    <table class = "table table-danger table-sstriped-columns table-hover">
+        <tr>
+            <th>First Name</td>
+            <th>Last Name</td>
+            <th>Gender</td>
+            <th>Age</td>
+        </tr>
+        <% users.forEach(user=>{%>
+            <tr>
+                <td>
+                    <% users.firstName %>
+                </td>
+                <td>
+                    <% users.lastName %>
+                </td>
+                <td>
+                    <% users.gender %>
+                </td>
+                <td>
+                    <% users.age %>
+                </td>
+            </tr>
+            <% }); >%
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
+
 </html>
